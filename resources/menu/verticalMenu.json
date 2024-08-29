@@ -1,0 +1,144 @@
+{
+  "menu": [
+    {
+      "url": "/",
+      "name": "Dashboard",
+      "icon": "menu-icon tf-icons bx bx-home-circle",
+      "slug": "home"
+    },
+    {
+      "url": "",
+      "name": "Users",
+      "icon": "menu-icon tf-icons bx bx-user",
+      "slug": [
+        "vendor.index",
+        "vendor.create",
+        "vendor.edit",
+        "vendor.show",
+        "admin.index",
+        "admin.create",
+        "admin.edit",
+        "admin.show",
+        "salesman.index",
+        "salesman.create",
+        "salesman.edit",
+        "salesman.show"
+      ],
+      "can": [
+        "users.*",
+        "admin.*",
+        "vendor.*",
+        "salesman.*"
+      ],
+      "submenu": [
+        {
+          "url": "/admins",
+          "name": "Admin",
+          "slug": [
+            "admin.index",
+            "admin.create",
+            "admin.edit",
+            "admin.show"
+          ],
+          "can": "admin.*"
+        },
+        {
+          "url": "/vendors",
+          "name": "Vendor",
+          "slug": [
+            "vendor.index",
+            "vendor.create",
+            "vendor.edit",
+            "vendor.show"
+          ],
+          "can": "vendor.*"
+        },
+        {
+          "url": "/salesmen",
+          "name": "Salesman",
+          "slug": [
+            "salesman.index",
+            "salesman.create",
+            "salesman.edit",
+            "salesman.show"
+          ],
+          "can": "salesman.*"
+        }
+      ]
+    },
+    {
+      "url": "/warehouses",
+      "name": "Warehouse",
+      "icon": "menu-icon tf-icons bx bx-building",
+      "slug": [
+        "warehouse.index",
+        "warehouse.create",
+        "warehouse.edit",
+        "warehouse.show"
+      ],
+      "can": "warehouse.*"
+    },
+    {
+      "url": "/categories",
+      "name": "Category",
+      "icon": "menu-icon tf-icons bx bx-category",
+      "slug": [
+        "category.index",
+        "category.create",
+        "category.edit",
+        "category.show"
+      ],
+      "can": "category.*"
+    },
+    {
+      "url": "/products",
+      "name": "Product",
+      "icon": "menu-icon tf-icons bx bx-cube",
+      "slug": [
+        "product.index",
+        "product.create",
+        "product.edit",
+        "product.show"
+      ],
+      "can": "product.*"
+    },
+    {
+      "url": "",
+      "name": "Reservations",
+      "icon": "menu-icon tf-icons bx bx-bookmarks",
+      "slug": [
+        "reservation.index",
+        "reservation.create",
+        "product.list"
+      ],
+      "can": "reservation.*",
+      "submenu": [
+        {
+          "url": "/reservations/create",
+          "name": "Make",
+          "role": "Salesman",
+          "slug": [
+            "reservation.create",
+            "product.list"
+          ]
+        },
+        {
+          "url": "/reservations",
+          "name": "Listing",
+          "slug": [
+            "reservation.index"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "/settings/account",
+      "name": "Settings",
+      "icon": "menu-icon tf-icons bx bx-cog",
+      "slug": [
+        "settings.account",
+        "settings.password"
+      ]
+    }
+  ]
+}

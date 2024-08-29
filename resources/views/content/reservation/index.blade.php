@@ -1,0 +1,32 @@
+@extends('layouts/contentNavbarLayout')
+
+@section('title', 'Reservation Listing')
+
+@section('content')
+    <x-breadcrumb>
+        <li class="breadcrumb-item">Reservation</li>
+        <li class="breadcrumb-item active" aria-current="page">Listing</li>
+    </x-breadcrumb>
+
+    <x-page-heading>Reservation Listing</x-page-heading>
+
+    <div class="row">
+        <div class="col-md-12">
+            @include('content.reservation.partials.nav')
+            <div class="card mb-4">
+                <h2 class="card-header h5">Listing</h2>
+                <hr class="my-0" />
+                <div class="card-body">
+                    {{ $dataTable->table() }}
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
+@push('styles')
+    <link href="{{ asset('vendor/datatables/datatables.min.css') }}" rel="stylesheet">
+@endpush
+@push('scripts')
+    <script src="{{ asset('vendor/datatables/datatables.min.js') }}"></script>
+    {{ $dataTable->scripts(attributes: ['type' => 'module']) }}
+@endpush

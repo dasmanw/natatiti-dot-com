@@ -1,0 +1,1 @@
+[21-Mar-2024 06:54:32 UTC] PHP Fatal error:  Trait "Spatie\Translatable\HasTranslations" not found in /home4/kkxanjmy/public_html/natatiti/app/Models/Warehouse.php on line 13

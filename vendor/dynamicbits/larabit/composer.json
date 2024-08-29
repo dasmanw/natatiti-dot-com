@@ -1,0 +1,30 @@
+{
+    "name": "dynamicbits/larabit",
+    "description": "Larabit is a robust Laravel package designed to streamline database interactions within Laravel applications. It offers a foundational service and repository equipped with a comprehensive set of convenient methods, empowering developers to efficiently handle database operations.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Dynamicbits\\Larabit\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dynamic Bits",
+            "email": "dynamicbits@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dynamicbits\\Larabit\\LarabitServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
